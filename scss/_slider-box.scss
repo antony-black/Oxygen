@@ -1,0 +1,114 @@
+.slider-box {
+  background-color: $color-8;
+  min-height: 840px;
+  padding: 114px 135px;
+
+  &__item {
+    min-height: 100vh;
+  }
+
+  &__card {
+    margin-top: 12%;
+  }
+}
+// =====================
+.slider-box .arrow{
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+}
+.slider-box .arrow-left{
+  left: 35px;
+}
+.slider-box .arrow-right{
+  right: 35px;
+}
+.slider-box .slick-dots{
+  display: flex;
+  position: absolute;
+  bottom: 25%;
+}
+.slick-dots li + li{
+  margin-left: 13px;
+}
+.slider-box .slick-dots button{
+    font-size: 0;
+    width: 6px;
+    height: 6px;
+    background-color: $color-2;
+    opacity: 0.4;
+    border-radius: 100%;
+}
+.slider-box .slick-dots button:hover,
+.slider-box .slick-active button{
+    width: 10px;
+    height: 10px;
+    background-color: $color-2;
+    opacity: 1;
+}
+// =====================
+.card-slider {
+
+  &__title {
+        max-width: 705px;
+        font-family: $ff-2;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1.3;
+        color: $color-2;
+    
+        & + *{
+          margin-top: 30px;
+        }
+      }
+    
+      &__text {
+        max-width: 560px;
+        color: $color-15;
+      }
+}
+// ====================
+@media (max-width: 991.98px) {
+  .slider-box{
+    padding: 50px 80px;
+    min-height: 600px;
+
+    &__item{
+      
+    }
+
+    &__card{
+     
+    }
+  }
+  .card-slider__title{
+    font-size: 30px;
+  }
+  .slider-box .arrow{
+    top: 45%;
+  }
+}
+@media (max-width: 479.98px){
+  .slider-box{
+    padding: 50px 30px;
+    height: 400px;
+  }
+  .card-slider__title{
+    font-size: 24px;
+  }
+  .slider-box .arrow{
+    top: 50%;
+  }
+  .slider-box .arrow{
+    display: none;
+  }
+}
+@media (max-width: 380px){
+  .slider-box{
+    padding: 30px;
+  }
+}
+
+
+
+

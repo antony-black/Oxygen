@@ -1,0 +1,131 @@
+.info {
+  padding: 145px 0 160px;
+  background-color: $color-8;
+
+  &__title + *{
+    margin-top: 90px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+.card-info {
+  background-color: $color-3;
+  padding: 24px 0 53px 25px;
+  text-align: center;
+  transition: all .5s;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+
+  &__name {
+    text-align: left;
+
+    & a{
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.38;
+      color: $color-2;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    & + *{
+      margin-top: 10px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-2;
+    line-height: 1.36;
+
+    & + *{
+      margin-top: 50px;
+    }
+  }
+
+  &__sign {
+    font-size: 40px;
+    align-self: start;
+  }
+
+  &__number {
+    font-size: 80px;
+  }
+
+  &__date {
+    font-size: 20px;
+    align-self: end;
+  }
+
+  &__list{
+
+    & + *{
+      margin-top: 70px;
+    }
+  }
+
+  &__list-item {
+    line-height: 1.38;
+    color: $color-2;
+
+    & + &{
+      margin-top: 30px;
+    }
+  }
+
+  &__link {
+
+    & a{
+    font-family: $ff-2;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: $color-2;
+
+    &:hover{
+      text-decoration: underline;
+    }
+    }
+  }
+}
+// ========================
+@media (max-width: 991.98px) {
+  .info{
+    padding: 50px 0;
+  }
+}
+@media (max-width: 767.98px){
+  .info__items{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .info__item:last-child{
+    grid-column: span 2;
+  }
+}
+@media (max-width: 600px){
+  .info__items{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .info__item:last-child{
+    grid-column: span 1;
+  }
+}
+@media (max-width: 380px) {
+  .info{
+    padding: 30px 0;
+
+    &__title + *{
+      margin-top: 50px;
+    }
+  }
+}
