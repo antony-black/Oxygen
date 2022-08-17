@@ -1,1 +1,2 @@
-Applied html, SCSS, Grid, Flex Box, jquery, adaptive layout
+# Oxygen
+Applied HTML, SCSS, Grid, Flex Box, jquery, BEM, adaptive layout
